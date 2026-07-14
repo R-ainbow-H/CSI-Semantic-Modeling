@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Dataset
+Data/
+
+# Model weights
+*.pth
+*.pt
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Windows
+Thumbs.db
+Desktop.ini
