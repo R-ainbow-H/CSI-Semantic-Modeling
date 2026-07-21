@@ -137,17 +137,46 @@ class NTU_Fi_ResNet(nn.Module):
         self.fc = nn.Linear(512*ResBlock.expansion, num_classes)
         
     def forward(self, x):
+
+        print("\n========== Forward ==========")
+
+        print("Input:", x.shape)
+
         x = self.reshape(x)
-        x = self.relu(self.batch_norm1(self.conv1(x)))
+        print("After reshape:", x.shape)
+
+        x = self.conv1(x)
+        print("After conv1:", x.shape)
+
+        x = self.batch_norm1(x)
+        x = self.relu(x)
+
         x = self.max_pool(x)
+        print("After maxpool:", x.shape)
+
         x = self.layer1(x)
+        print("After layer1:", x.shape)
+
         x = self.layer2(x)
+        print("After layer2:", x.shape)
+
         x = self.layer3(x)
+        print("After layer3:", x.shape)
+
         x = self.layer4(x)
+        print("After layer4:", x.shape)
+
         x = self.avgpool(x)
+        print("After avgpool:", x.shape)
+
         x = x.reshape(x.shape[0], -1)
+        print("After flatten:", x.shape)
+
         x = self.fc(x)
-        
+        print("After fc:", x.shape)
+
+        print("=============================\n")
+
         return x
         
     def _make_layer(self, ResBlock, blocks, planes, stride=1):
