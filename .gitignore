@@ -21,3 +21,17 @@ Data/
 # Windows
 Thumbs.db
 Desktop.ini
+
+# Generated feature files
+features/
+
+# Training logs
+logs/
+
+# Model checkpoints
+*.pth
+*.pt
+
+# Python cache
+__pycache__/
+*.pyc
