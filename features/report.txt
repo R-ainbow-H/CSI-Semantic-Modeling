@@ -1,0 +1,48 @@
+CSI Embedding Analysis Report
+================================
+
+Dataset: Widar
+Model: ResNet18
+Split: train
+Checkpoint: weights\final_Widar_ResNet18.pth
+Feature shape: (34926, 512)
+Analysis points: 3000
+
+Silhouette Score: 0.03287294879555702
+Adjusted Rand Index: 0.3771310377888952
+
+Intra-class distance:
+- 1-Push&Pull: 14.64133071899414
+- 10-Draw-Zigzag(V): 13.55940055847168
+- 11-Draw-N(V): 13.31417179107666
+- 12-Draw-O(V): 13.892230987548828
+- 13-Draw-1: 12.594263076782227
+- 14-Draw-2: 13.132206916809082
+- 15-Draw-3: 13.303276062011719
+- 16-Draw-4: 13.768946647644043
+- 17-Draw-5: 13.925297737121582
+- 18-Draw-6: 13.500103950500488
+- 19-Draw-7: 13.434345245361328
+- 2-Sweep: 14.358476638793945
+- 20-Draw-8: 13.384186744689941
+- 21-Draw-9: 13.232690811157227
+- 22-Draw-10: 13.029399871826172
+- 3-Clap: 15.552311897277832
+- 4-Slide: 15.30311107635498
+- 5-Draw-N(H): 13.335648536682129
+- 6-Draw-O(H): 13.812007904052734
+- 7-Draw-Rectangle(H): 13.224327087402344
+- 8-Draw-Triangle(H): 13.016486167907715
+- 9-Draw-Zigzag(H): 15.044926643371582
+
+Generated files:
+- features.npy
+- labels.npy
+- pca.png
+- tsne.png
+- similarity.csv
+- distance_matrix.csv
+- similarity_heatmap.png
+- distance_heatmap.png
+- kmeans_labels.npy
+- metrics.json
